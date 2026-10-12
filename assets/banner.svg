@@ -1,124 +1,171 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="100%">
   <defs>
+    <!-- Background Gradients -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0a0f1d" />
       <stop offset="50%" stop-color="#0e172a" />
       <stop offset="100%" stop-color="#1e1b4b" />
     </linearGradient>
 
-    <linearGradient id="primaryText" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Text & Brand Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8" />
       <stop offset="50%" stop-color="#818cf8" />
       <stop offset="100%" stop-color="#c084fc" />
     </linearGradient>
 
-    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.8" />
-      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.8" />
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#34d399" stop-opacity="0.8" />
     </linearGradient>
 
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.2" />
+    </linearGradient>
+
+    <!-- Visual Effects Filters -->
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="6" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
 
-    <style>
-      @keyframes floatSlow {
-        0%, 100% { transform: translateY(0px) rotate(0deg); }
-        50% { transform: translateY(-12px) rotate(1deg); }
-      }
-      @keyframes pulseNode {
-        0%, 100% { r: 6px; opacity: 0.5; }
-        50% { r: 10px; opacity: 1; }
-      }
-      @keyframes beamMove {
-        0% { stroke-dashoffset: 400; }
-        100% { stroke-dashoffset: 0; }
-      }
-      @keyframes badgeSlide {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-4px); }
-      }
-      .circuit-line {
-        stroke: #38bdf8;
-        stroke-opacity: 0.25;
-        stroke-dasharray: 8 12;
-        animation: beamMove 25s linear infinite;
-      }
-      .pulsing-dot {
-        animation: pulseNode 3.5s ease-in-out infinite;
-      }
-      .badge-float {
-        animation: badgeSlide 4s ease-in-out infinite;
-      }
-    </style>
+    <filter id="textShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+
+    <!-- Markers -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#818cf8" />
+    </marker>
   </defs>
 
-  <!-- Background -->
+  <!-- Canvas Background -->
   <rect width="1200" height="340" rx="16" fill="url(#bgGrad)" />
-  <rect width="1198" height="338" x="1" y="1" rx="15" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5" />
+  <rect width="1198" height="338" x="1" y="1" rx="15" fill="none" stroke="#334155" stroke-width="1.5" stroke-opacity="0.6" />
 
-  <!-- Dynamic / Animated Flow Connectors in Background -->
-  <g class="circuit-line" fill="none" stroke-width="2">
-    <path d="M 60,80 C 220,40 340,160 500,90 C 680,20 820,120 1140,70" />
-    <path d="M 100,280 C 300,240 450,300 700,260 C 900,220 1020,300 1120,250" />
-    <path d="M 180,310 C 260,180 400,210 580,270 C 800,320 980,180 1080,140" />
+  <!-- Background Tech Grid Pattern -->
+  <g stroke="#ffffff" stroke-width="0.5" opacity="0.05">
+    <line x1="0" y1="50" x2="1200" y2="50" />
+    <line x1="0" y1="120" x2="1200" y2="120" />
+    <line x1="0" y1="190" x2="1200" y2="190" />
+    <line x1="0" y1="260" x2="1200" y2="260" />
+    <line x1="150" y1="0" x2="150" y2="340" />
+    <line x1="350" y1="0" x2="350" y2="340" />
+    <line x1="600" y1="0" x2="600" y2="340" />
+    <line x1="850" y1="0" x2="850" y2="340" />
+    <line x1="1050" y1="0" x2="1050" y2="340" />
+  </g>
+
+  <!-- Ambient Dynamic Glowing Orbs in Background -->
+  <circle cx="180" cy="90" r="130" fill="#0284c7" opacity="0.12" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.08;0.18;0.08" dur="6s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="1060" cy="220" r="140" fill="#8b5cf6" opacity="0.12" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.10;0.22;0.10" dur="7s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Animated Data Flow Wave (Background Layer) -->
+  <g opacity="0.22">
+    <path d="M 0,220 Q 300,160 600,220 T 1200,200 L 1200,340 L 0,340 Z" fill="#3b82f6">
+      <animate attributeName="d" dur="12s" repeatCount="indefinite"
+        values="M 0,220 Q 300,160 600,220 T 1200,200 L 1200,340 L 0,340 Z;
+                M 0,240 Q 300,280 600,190 T 1200,230 L 1200,340 L 0,340 Z;
+                M 0,220 Q 300,160 600,220 T 1200,200 L 1200,340 L 0,340 Z" />
+    </path>
+    <path d="M 0,250 Q 400,290 800,210 T 1200,240 L 1200,340 L 0,340 Z" fill="#8b5cf6">
+      <animate attributeName="d" dur="16s" repeatCount="indefinite"
+        values="M 0,250 Q 400,290 800,210 T 1200,240 L 1200,340 L 0,340 Z;
+                M 0,210 Q 400,150 800,260 T 1200,220 L 1200,340 L 0,340 Z;
+                M 0,250 Q 400,290 800,210 T 1200,240 L 1200,340 L 0,340 Z" />
+    </path>
+  </g>
+
+  <!-- Dynamic Matching Connection Lines (Background Layer) -->
+  <g fill="none" stroke="url(#flowGrad)" stroke-width="2" stroke-linecap="round" opacity="0.45">
+    <path d="M 120,70 C 320,30 460,110 680,60 C 880,10 980,80 1120,50" stroke-dasharray="6 8">
+      <animate attributeName="stroke-dashoffset" from="200" to="0" dur="20s" repeatCount="indefinite" />
+    </path>
+    <path d="M 80,280 C 280,250 480,300 750,265 C 920,245 1020,290 1140,260" stroke-dasharray="8 10">
+      <animate attributeName="stroke-dashoffset" from="0" to="200" dur="25s" repeatCount="indefinite" />
+    </path>
   </g>
 
   <!-- Animated Glowing Network Nodes -->
-  <circle cx="220" cy="60" r="7" fill="#38bdf8" class="pulsing-dot" filter="url(#glow)" />
-  <circle cx="500" cy="90" r="8" fill="#818cf8" class="pulsing-dot" filter="url(#glow)" style="animation-delay: 1.2s;" />
-  <circle cx="700" cy="260" r="7" fill="#c084fc" class="pulsing-dot" filter="url(#glow)" style="animation-delay: 2.1s;" />
-  <circle cx="1080" cy="140" r="8" fill="#38bdf8" class="pulsing-dot" filter="url(#glow)" style="animation-delay: 0.7s;" />
-  <circle cx="1140" cy="70" r="6" fill="#34d399" class="pulsing-dot" filter="url(#glow)" style="animation-delay: 1.8s;" />
+  <circle cx="280" cy="54" r="5" fill="#38bdf8" filter="url(#glow)">
+    <animate attributeName="r" values="4;7;4" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="680" cy="60" r="5" fill="#818cf8" filter="url(#glow)">
+    <animate attributeName="r" values="4;7;4" dur="4s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="980" cy="80" r="6" fill="#34d399" filter="url(#glow)">
+    <animate attributeName="r" values="4;8;4" dur="3.5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3.5s" repeatCount="indefinite" />
+  </circle>
 
-  <!-- Lead to Account Flow Visual Elements (Subtle Decorative Cards in lower right) -->
-  <g class="badge-float" opacity="0.85">
+  <!-- Match Visual Flow Indicator (Right Side Decorator) -->
+  <g transform="translate(900, 205)" opacity="0.9">
     <!-- Lead Pill -->
-    <rect x="910" y="215" width="90" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
-    <text x="955" y="236" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">👤 Lead</text>
+    <rect x="0" y="0" width="85" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <text x="42" y="21" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle">👤 Lead</text>
     
     <!-- Connector Arrow -->
-    <path d="M 1005,231 L 1025,231" stroke="#818cf8" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M 92 16 L 122 16" stroke="#818cf8" stroke-width="2" marker-end="url(#arrow)" />
     
     <!-- Account Pill -->
-    <rect x="1030" y="215" width="115" height="32" rx="16" fill="#1e293b" stroke="#a855f7" stroke-width="1.5" />
-    <text x="1087" y="236" fill="#c084fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">🏢 Account</text>
+    <rect x="130" y="0" width="105" height="32" rx="16" fill="#1e293b" stroke="#a855f7" stroke-width="1.5" />
+    <text x="182" y="21" fill="#c084fc" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" text-anchor="middle">🏢 Account</text>
   </g>
 
-  <!-- Foreground Title and Subtitle Content (Always On Top) -->
-  <g id="foreground-content">
-    <!-- Category Tag Badge -->
-    <rect x="80" y="42" width="260" height="28" rx="14" fill="#1e293b" stroke="url(#accentGrad)" stroke-width="1.2" />
-    <circle cx="95" cy="56" r="4.5" fill="#10b981" />
-    <text x="110" y="61" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" letter-spacing="0.5">REVOPS &amp; B2B CRM INTELLIGENCE</text>
+  <!-- Foreground Content: 100% Readable, Never Obstructed -->
+  <g id="foreground" transform="translate(80, 0)">
+    <!-- Category Pill Badge -->
+    <g transform="translate(0, 42)">
+      <rect width="320" height="28" rx="14" fill="#0f172a" stroke="url(#primaryGrad)" stroke-width="1.2" />
+      <circle cx="16" cy="14" r="4.5" fill="#10b981">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="32" y="19" fill="#94a3b8" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" letter-spacing="1">REVOPS &amp; LEAD-TO-ACCOUNT MATCHING</text>
+    </g>
 
     <!-- Main Title -->
-    <text x="80" y="125" fill="url(#primaryText)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="44" font-weight="800" letter-spacing="-1">Awesome Lead-to-Account Matching</text>
-
-    <!-- Subtitle / Tagline -->
-    <text x="80" y="168" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="19" font-weight="500">
-      The Curated Directory of SaaS Solutions, Open-Source Tools &amp; Fuzzy Matching Engines
+    <text x="0" y="128" fill="url(#primaryGrad)" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="800" letter-spacing="-1" filter="url(#textShadow)">
+      Awesome Lead-to-Account Matching
     </text>
 
-    <!-- Value propositions / keywords -->
-    <text x="80" y="202" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14">
-      🎯 Automated Routing &nbsp;•&nbsp; 🧩 Fuzzy Entity Resolution &nbsp;•&nbsp; 📈 Account-Based Marketing (ABM) &nbsp;•&nbsp; 🛡️ Data Quality
+    <!-- Subtitle -->
+    <text x="0" y="172" fill="#f1f5f9" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="500" filter="url(#textShadow)">
+      Curated Directory of Enterprise SaaS Solutions, Open-Source Tools &amp; Fuzzy Matching Engines
     </text>
 
-    <!-- Pill Stats/Highlight Box -->
-    <g transform="translate(80, 235)">
-      <rect width="170" height="42" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
-      <text x="16" y="26" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Enterprise SaaS</text>
-      <text x="125" y="26" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">10+ Leaders</text>
+    <!-- Bottom Feature Pills -->
+    <g transform="translate(0, 218)">
+      <!-- Pill 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="185" height="38" rx="10" fill="#0f172a" fill-opacity="0.9" stroke="#334155" stroke-width="1.2" />
+        <text x="92" y="24" fill="#38bdf8" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" text-anchor="middle">🎯 Automated Routing</text>
+      </g>
 
-      <rect x="185" width="185" height="42" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
-      <text x="201" y="26" fill="#a855f7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Open-Source</text>
-      <text x="290" y="26" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">15+ Engines</text>
+      <!-- Pill 2 -->
+      <g transform="translate(197, 0)">
+        <rect width="195" height="38" rx="10" fill="#0f172a" fill-opacity="0.9" stroke="#334155" stroke-width="1.2" />
+        <text x="97" y="24" fill="#a855f7" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" text-anchor="middle">🧩 Entity Resolution</text>
+      </g>
 
-      <rect x="385" width="185" height="42" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1" />
-      <text x="401" y="26" fill="#34d399" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700">Fuzzy Matching</text>
-      <text x="510" y="26" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">Probabilistic</text>
+      <!-- Pill 3 -->
+      <g transform="translate(404, 0)">
+        <rect width="180" height="38" rx="10" fill="#0f172a" fill-opacity="0.9" stroke="#334155" stroke-width="1.2" />
+        <text x="90" y="24" fill="#34d399" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" text-anchor="middle">📈 ABM Orchestration</text>
+      </g>
+
+      <!-- Pill 4 -->
+      <g transform="translate(596, 0)">
+        <rect width="180" height="38" rx="10" fill="#0f172a" fill-opacity="0.9" stroke="#334155" stroke-width="1.2" />
+        <text x="90" y="24" fill="#fbbf24" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" text-anchor="middle">🛡️ CRM Data Hygiene</text>
+      </g>
     </g>
   </g>
 </svg>
