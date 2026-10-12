@@ -1,6 +1,6 @@
 # Awesome-Lead-To-Account-Matching
 
-# Top Lead-to-Account Matching Tools Ecosystem
+## Top Lead-to-Account Matching Tools Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Fuzzy Matching, Automated Lead Routing & CRM Data Quality*  
