@@ -6,6 +6,7 @@
   <a href="https://github.com/ishandutta2007/Awesome-Lead-To-Account-Matching/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Lead-To-Account-Matching?style=flat-square&color=blue" alt="GitHub Forks"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Lead-To-Account-Matching/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Lead-To-Account-Matching?style=flat-square&color=red" alt="GitHub Issues"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Lead-To-Account-Matching/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Lead-To-Account-Matching?style=flat-square&color=green" alt="License"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
 
 <p align="center">
@@ -23,6 +24,8 @@
 - [💻 Open-Source GitHub Projects](#-open-source-github-projects)
 - [🧩 Architecture & Framework Stacks](#-architecture--framework-stacks)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support](#-support)
+- [⭐ Star History](#-star-history)
 - [⚖️ Disclaimer](#️-disclaimer)
 
 ---
@@ -129,6 +132,22 @@ We welcome additions, corrections, and tool submissions from the RevOps, SalesOp
 5. 📬 **Submit a Pull Request** with a concise explanation
 
 ⭐ Don't forget to star the repo if you find this directory valuable!
+
+---
+
+## 💖 Support
+
+Thank you for exploring and utilizing **Awesome Lead-to-Account Matching**! If you find this curated resource helpful for your RevOps strategy, pipeline architecture, or data engineering work, please consider supporting the project:
+
+- ⭐ **Star this repository** to help others discover it!
+- 🍴 **Fork and contribute** by submitting new tools or refining entries.
+- 📢 **Share with colleagues** in your RevOps, SalesOps, or Data Engineering networks.
+- ☕ **Buy me a coffee**: If this project brought value to your workflow, support ongoing maintenance and research on my [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007)!
+
+---
+
+##  Star History
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Lead-To-Account-Matching&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Lead-To-Account-Matching&type=date&legend=top-left)
 
 ---
 
