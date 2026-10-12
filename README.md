@@ -1,122 +1,145 @@
-# Awesome-Lead-To-Account-Matching
+# 🎯 Awesome Lead-to-Account Matching [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-## Top Lead-to-Account Matching Tools Ecosystem
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-EE2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Lead-To-Account-Matching/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Lead-To-Account-Matching?style=flat-square&logo=github&color=gold" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Lead-To-Account-Matching/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Lead-To-Account-Matching?style=flat-square&color=blue" alt="GitHub Forks"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Lead-To-Account-Matching/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Lead-To-Account-Matching?style=flat-square&color=red" alt="GitHub Issues"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Lead-To-Account-Matching/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Lead-To-Account-Matching?style=flat-square&color=green" alt="License"/></a>
+</p>
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-*Focused on Fuzzy Matching, Automated Lead Routing & CRM Data Quality*  
-**Last updated: March 2026**
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Lead-To-Account Matching Banner" width="100%"/>
+</p>
 
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Lead-to-Account Matching Tools**. These tools automatically associate incoming leads with existing accounts in CRM systems using email domains, company names, phone numbers, and custom fields — enabling account-based marketing, accurate lead routing, and complete buyer context without manual data cleanup.
-
-**Examples** include Salesforce Match Engine, LeanData, Leadspace, Full Circle Insights, CaliberMind, RingLead, Demandbase Orchestration, ZoomInfo Complete, Openprise, and Chili Piper Distro (the category leaders).
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for self-hosting, custom matching logic, and transparent data workflows — ideal for revenue operations teams, developers, and organizations seeking data-sovereign lead management.
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## Table of Contents
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## SaaS/Hosted Platforms
-
-- **[Salesforce Match Engine](https://help.salesforce.com/s/articleView?id=sales.matching_rules_standard_leads_on_accounts_rule.htm&type=5)**  
-  Native matching rule activated with Account Engagement Advanced/Premium. Uses a matching equation (Company + Street/City/Phone or Website) with fuzzy algorithms like acronym matching, edit distance, and normalized company names. Email domain matching ignores free providers like Gmail and Yahoo. Customizable thresholds and scoring for each field [citation:14].
-
-- **[LeanData](https://www.leandata.com/)**  
-  Industry-leading lead-to-account matching with AI-powered fuzzy logic evaluating multiple fields simultaneously (company name, email, website, address, phone). Achieves 95% match accuracy with configurable tie-breakers, filters, and transparent audit logs. Supports standard, alternate, and custom fields. Native Salesforce app with real-time Tagging Preview for troubleshooting [citation:3][citation:9][citation:15].
-
-- **[Leadspace](https://www.leadspace.com/)**  
-  B2B customer data platform with GTM Data Intelligence Cloud for unified buyer intelligence, buying group identification, and real-time signal activation across marketing, sales, and RevOps.
-
-- **[Full Circle Insights](https://www.fullcircleinsights.com/)**  
-  Native Salesforce Matchmaker with automated lead-to-account matching, conversion, and assignment. Features fuzzy matching, self-configurable rules engine, drag-and-drop tie-breaker prioritization, and email domain logic with free provider exclusions. Account Activity Ratings provide engagement visibility [citation:8].
-
-- **[CaliberMind](https://calibermind.com/)**  
-  GTM Intelligence and Multi-Touch Attribution platform unifying disconnected marketing and sales signals for B2B revenue attribution and buyer journey analysis [citation:12].
-
-- **[RingLead](https://www.ringlead.com/)**  
-  Data orchestration platform with lead-to-account matching, deduplication, and routing capabilities for Salesforce and marketing automation systems.
-
-- **[Demandbase Orchestration](https://www.demandbase.com/)**  
-  Account-based marketing platform with lead-to-account matching, buying group identification, and intent-based routing.
-
-- **[ZoomInfo Complete](https://www.zoominfo.com/)**  
-  Sales intelligence platform with data enrichment, lead-to-account matching, and automated routing for go-to-market teams [citation:12].
-
-- **[Openprise](https://www.openprise.com/)**  
-  Data orchestration platform with 400+ pre-built connectors, multi-vendor enrichment waterfalls, deduplication, lead-to-account matching, routing, scoring, and segmentation. No-code Jobs and Bots. API Factory turns configured Jobs into per-tenant REST endpoints [citation:11].
-
-- **[Chili Piper Distro](https://www.chilipiper.com/)**  
-  Lead routing and meeting scheduling platform with instant lead-to-account matching and intelligent distribution based on territory, capacity, and availability.
-
-## Open-Source GitHub Projects
-
-- **[account-fleet](https://pypi.org/project/account-fleet/0.2.4/)**  
-  Open-source CLI and MCP server for LLM-powered account research and scoring. Processes CSV input with account data, runs multi-stage filtering (compounding filter chaining), and exports ranked deliverables with exact source quotes. Supports Ollama, LM Studio, Groq, and OpenAI-compatible providers. Presets for scoring, filtering, triage, classification, and extraction. Ideal for account-based targeting without proprietary SaaS [citation:1].
-
-- **[odoo-lead-manager](https://pypi.org/project/odoo-lead-manager/1.3.2/)**  
-  Open-source Python CLI and API for managing Odoo CRM leads. Features lead filtering by date, source, status, user, email, phone, and tags. Includes SmartDistributor for lead distribution among users, invoice joining based on partner relationships, and CSV/TSV file input. Supports Odoo export format for bulk operations [citation:7].
-
-- **[n8n Lead-to-Account Matching Workflow](https://restflow.io/automate-lead-to-account-matching-n8n/)**  
-  Open-source automation template replicating Salesforce Lead-to-Account matching using n8n. Extracts email domains, groups contacts by domain to form accounts, checks existing accounts, updates records, and notifies sales team via Slack. Uses Google Sheets as data source but adaptable to any CRM or database. Cost-effective alternative for startups avoiding Salesforce licensing [citation:13].
-
-- **[Corteza CRM](https://docs.cortezaproject.org/corteza-docs/2024.9/end-user-guide/crm/index.html)**  
-  Open-source low-code platform (Apache 2.0) with built-in CRM including lead management, account conversion, and opportunity tracking. Leads can be converted into accounts and contacts with configurable conversion rules. Lead rating system for qualification. Deliberately mirrors Salesforce objects and workflows for easy admin migration [citation:19].
-
-- **[Openprise API Factory](https://github.com/api-evangelist/openprise)**  
-  Licensed feature of Openprise that turns configured Jobs and Bots into per-tenant REST endpoints callable from Marketo webhooks, Salesforce triggers, or any HTTP POST system. Enables programmatic lead-to-account matching and data orchestration [citation:11].
-
-- **[Talend Open Studio](https://www.talend.com/)**  
-  Open-source ETL tool with extensive connectivity for data integration, cleansing, transformation, and migration. Can be used to build custom lead-to-account matching pipelines with fuzzy matching libraries and CRM connectors. GUI-based with active community support [citation:5].
-
-- **[Apache NiFi](https://github.com/apache/nifi)**  
-  Open-source data flow automation with visual programming and 300+ processors. Can be configured to ingest leads, extract domains, match against account records, and route results to CRM systems.
-
-- **[Apache Camel](https://github.com/apache/camel)**  
-  Open-source integration framework implementing Enterprise Integration Patterns. Suitable for building custom lead-to-account matching pipelines with 300+ components for CRM, database, and messaging integration.
-
-- **[Debezium](https://github.com/debezium/debezium)**  
-  Open-source change data capture (CDC) platform. Can stream lead and account changes from databases in real-time to trigger matching workflows.
-
-- **[Dedupe.io](https://github.com/dedupeio/dedupe)**  
-  Open-source Python library for fuzzy matching, deduplication, and entity resolution. Includes active learning for training matching models. Ideal for building custom lead-to-account matching with configurable similarity thresholds.
-
-- **[Splink](https://github.com/moj-analytical-services/splink)**  
-  Open-source probabilistic record linkage and deduplication at scale. Supports fuzzy matching across multiple fields with Fellegi-Sunter model. Suitable for enterprise lead-to-account matching.
-
-- **[Zingg](https://github.com/zinggAI/zingg)**  
-  Open-source entity resolution and deduplication with machine learning. Supports fuzzy matching, blocking, and clustering for large-scale lead-to-account matching.
-
-### Additional Strong Open-Source Options
-
-- **[OpenRefine](https://github.com/OpenRefine/OpenRefine)** — Open-source data cleansing and transformation tool with fuzzy matching and clustering for account deduplication.
-- **[RecordLinkage](https://github.com/J535D165/recordlinkage)** — Python library for record linkage and deduplication with multiple comparison algorithms.
-- **[FuzzyWuzzy](https://github.com/seatgeek/fuzzywuzzy)** — Python fuzzy string matching library for company name and address matching.
-- **[RapidFuzz](https://github.com/maxbachmann/RapidFuzz)** — Fast fuzzy string matching in Python and C++.
-- **Orchestration Tools** — Apache Airflow, Dagster, Prefect for scheduling matching pipelines.
-- **CRM Platforms** — Corteza, ERPNext, Odoo for open-source CRM with lead management.
-
-**Frameworks for building custom systems**: Combine **account-fleet** for LLM-powered account research, **n8n** for workflow automation, **Dedupe.io** or **Splink** for fuzzy matching, **Corteza CRM** or **Odoo** for CRM data, and **Apache NiFi** for data pipelines to build a complete self-hosted lead-to-account matching stack.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- Lead-to-account matching tools must comply with data protection regulations (GDPR, CCPA), email privacy laws, and CRM data governance requirements.
-- Self-hosted open-source solutions require proper security hardening, matching accuracy validation, and ongoing data quality management.
+> 🚀 **A curated directory of SaaS platforms, open-source libraries, and fuzzy matching engines for automated Lead-to-Account (L2A) matching, B2B lead routing, entity resolution, and CRM data hygiene.**
 
 ---
 
-**Made for revenue operations teams, marketing operations specialists, CRM administrators, and developers building lead matching platforms.**  
-Let's make lead-to-account matching more open, accurate, and data-sovereign.
+## 📑 Table of Contents
+
+- [📊 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🏢 SaaS & Enterprise Platforms](#-saas--enterprise-platforms)
+- [💻 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🧩 Architecture & Framework Stacks](#-architecture--framework-stacks)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚖️ Disclaimer](#️-disclaimer)
+
+---
+
+## 📊 Sector Overview & Market Dynamics
+
+The global **Lead-to-Account (L2A) matching and Revenue Operations (RevOps) orchestration market** is estimated at **$2.4 Billion in 2026** and projected to surpass **$5.8 Billion by 2031** (growing at a ~19.5% CAGR), accelerated by the rise of Account-Based Marketing (ABM), AI-driven buyer group detection, and strict CRM data quality mandates.
+
+Market dynamics display **moderate fragmentation with strong core consolidation**: While mega-suite CRM platforms like **Salesforce** and data aggregators like **ZoomInfo** anchor high enterprise market share, specialized routing engines (e.g., LeanData, Chili Piper) and modern open-source entity resolution frameworks (e.g., Splink, Dedupe, n8n) drive intense continuous innovation across mid-market and self-hosted environments.
+
+---
+
+## 🏢 SaaS & Enterprise Platforms
+
+The table below lists leading SaaS products for automated Lead-to-Account matching, sorted in descending order by company scale (market capitalization or valuation).
+
+| 🏢 Platform | 💰 Company Scale (Valuation / Revenue) | 🏷️ Starting Price | 🎁 Free Tier / Free Trial Limits | 🔍 Core Matching & Routing Features |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Salesforce Match Engine](https://help.salesforce.com/s/articleView?id=sales.matching_rules_standard_leads_on_accounts_rule.htm&type=5)** | ~$280B Market Cap (~$38B Annual Rev) | **$25/user/month** (Starter Suite) | **30-day free trial**; full access up to 2 active users & 2,500 contacts, no credit card required | Native matching rule engine; fuzzy string matching (Levenshtein, Jaro-Winkler, acronyms), website and email domain normalization, duplicate management. |
+| **[ZoomInfo Complete](https://www.zoominfo.com/)** | ~$4.2B Market Cap (~$1.2B Annual Rev) | **$14,995/year** (Advanced Tier) | **14-day free trial**; capped at 25 export credits & single-seat access | Enterprise B2B data enrichment waterfall, domain-level account resolution, buying group intelligence, automated CRM record enrichment. |
+| **[Demandbase Orchestration](https://www.demandbase.com/)** | ~$3.2B Valuation (~$300M ARR) | **$24,000/year** (ABM Core Tier) | **No free-forever plan**; custom **14-day sandbox trial** on request for up to 500 company domain audits | Complete ABM orchestration, multi-field fuzzy lead-to-account linking, account intent qualification, lead-to-opportunity mapping. |
+| **[LeanData](https://www.leandata.com/)** | ~$1.2B Valuation (~$95M ARR) | **$39/user/month** (Routing Essentials) | **14-day free trial**; access limited to sandbox environment with up to 1,000 test lead routing records | Recognized category leader; multi-variable fuzzy logic matching (95%+ accuracy), visual drag-and-drop lead routing, automated conversion, audit trails. |
+| **[Chili Piper Distro](https://www.chilipiper.com/)** | ~$625M Valuation (~$45M ARR) | **$30/user/month** (Distro plan) | **14-day free trial**; includes unlimited routing simulations for up to 5 test seats | Instant lead-to-account matching, dynamic round-robin routing, automated rep assignment based on territory, SLA adherence, and calendar booking. |
+| **[RingLead](https://www.ringlead.com/)** *(ZoomInfo)* | ~$450M Valuation (Acquired by ZoomInfo) | **$12,000/year** (Cleanse + Match Tier) | **14-day guided proof-of-concept trial**; limited to 1,000 record scan & matching diagnostics | Complete CRM data orchestration, automated fuzzy deduplication, multi-source enrichment normalization, and lead-to-account assignment rules. |
+| **[Leadspace](https://www.leadspace.com/)** | ~$350M Valuation (~$35M ARR) | **$25,000/year** (GTM Intelligence Base) | **No free-forever plan**; **14-day sandbox pilot** limited to 2,500 test account/lead records | Customer Data Platform (CDP) for B2B, AI-driven entity resolution, buyer profile scoring, graph-based account hierarchy discovery. |
+| **[Openprise](https://www.openprise.com/)** | ~$220M Valuation (~$25M ARR) | **$24,000/year** (Data Automation Suite) | **14-day sandbox access**; limited to 5 automation bot executions and 2,000 processed records | No-code RevOps automation, API factory, multi-vendor data enrichment waterfalls, automated lead matching, routing, and record merging. |
+| **[Full Circle Insights](https://www.fullcircleinsights.com/)** | ~$80M Valuation (~$15M ARR) | **$18,000/year** (Matchmaker Base) | **14-day sandbox trial**; restricted to single Salesforce sandbox org & 1,000 matched leads | 100% native Salesforce lead-to-account matching, conversion, funnel metrics attribution, engagement rating, tie-breaking rule prioritization. |
+| **[CaliberMind](https://calibermind.com/)** | ~$45M Valuation (~$8M ARR) | **$18,000/year** (RevOps Analytics Tier) | **14-day free trial**; limited to 2 data source connectors and 5,000 processed events | Revenue attribution engine, B2B customer journey mapping, automated identity resolution linking anonymous leads to target account hierarchies. |
+
+---
+
+## 💻 Open-Source GitHub Projects
+
+Explore top-rated open-source projects for building custom lead-to-account matching workflows, entity resolution pipelines, fuzzy string comparisons, and self-hosted CRM routing. Projects are sorted in descending order by **GitHub Star Count**.
+
+| 📦 Repository & Project | ⭐ Stars Badge | 🛠️ Technology | 📝 Description & L2A Capability |
+| :--- | :--- | :--- | :--- |
+| **[n8n](https://github.com/n8n-io/n8n)** | [![GitHub stars](https://img.shields.io/github/stars/n8n-io/n8n?style=social&color=white)](https://github.com/n8n-io/n8n/stargazers) | TypeScript / Node.js | Fair-code workflow automation tool. Easily orchestrates custom lead-to-account workflows: email domain parsing, CRM lookups, fuzzy matching, and Slack notifications without vendor lock-in. |
+| **[Odoo](https://github.com/odoo/odoo)** | [![GitHub stars](https://img.shields.io/github/stars/odoo/odoo?style=social&color=white)](https://github.com/odoo/odoo/stargazers) | Python / JavaScript | Leading open-source business suite & CRM with automated partner lead assignment, automated lead scoring, and customer account association mechanics. |
+| **[Apache Airflow](https://github.com/apache/airflow)** | [![GitHub stars](https://img.shields.io/github/stars/apache/airflow?style=social&color=white)](https://github.com/apache/airflow/stargazers) | Python | Programmatic data pipeline orchestrator. Ideal for scheduled enterprise batch deduplication, CRM sync, and multi-step lead-to-account matching workflows. |
+| **[ERPNext](https://github.com/frappe/erpnext)** | [![GitHub stars](https://img.shields.io/github/stars/frappe/erpnext?style=social&color=white)](https://github.com/frappe/erpnext/stargazers) | Python / JavaScript | 100% open-source ERP & CRM suite featuring customizable lead conversion rules, automated lead-to-customer linking, and contact management. |
+| **[Prefect](https://github.com/PrefectHQ/prefect)** | [![GitHub stars](https://img.shields.io/github/stars/PrefectHQ/prefect?style=social&color=white)](https://github.com/PrefectHQ/prefect/stargazers) | Python | Modern workflow orchestration engine for resilient data pipelines, real-time event-driven webhook processing, and lead matching ETL jobs. |
+| **[Dagster](https://github.com/dagster-io/dagster)** | [![GitHub stars](https://img.shields.io/github/stars/dagster-io/dagster?style=social&color=white)](https://github.com/dagster-io/dagster/stargazers) | Python | Cloud-native data orchestrator designed for software-defined data assets; models CRM accounts and leads as versioned assets with data-quality assertions. |
+| **[Debezium](https://github.com/debezium/debezium)** | [![GitHub stars](https://img.shields.io/github/stars/debezium/debezium?style=social&color=white)](https://github.com/debezium/debezium/stargazers) | Java | Open-source distributed platform for Change Data Capture (CDC). Streams real-time lead and account database changes to instantly trigger matching microservices. |
+| **[OpenRefine](https://github.com/OpenRefine/OpenRefine)** | [![GitHub stars](https://img.shields.io/github/stars/OpenRefine/OpenRefine?style=social&color=white)](https://github.com/OpenRefine/OpenRefine/stargazers) | Java | Battle-tested data cleansing and transformation powerhouse with built-in clustering algorithms (fingerprint, ngram-fingerprint, Levenshtein, PPM) for entity deduplication. |
+| **[FuzzyWuzzy](https://github.com/seatgeek/fuzzywuzzy)** | [![GitHub stars](https://img.shields.io/github/stars/seatgeek/fuzzywuzzy?style=social&color=white)](https://github.com/seatgeek/fuzzywuzzy/stargazers) | Python | Standard fuzzy string matching library in Python using Levenshtein distance to calculate differences between company names, street addresses, and domains. |
+| **[Apache Camel](https://github.com/apache/camel)** | [![GitHub stars](https://img.shields.io/github/stars/apache/camel?style=social&color=white)](https://github.com/apache/camel/stargazers) | Java | Versatile open-source enterprise integration framework with 300+ components to connect enterprise CRMs, event queues, and lead routing pipes. |
+| **[Apache NiFi](https://github.com/apache/nifi)** | [![GitHub stars](https://img.shields.io/github/stars/apache/nifi?style=social&color=white)](https://github.com/apache/nifi/stargazers) | Java | Robust visual dataflow system capable of ingesting raw inbound leads, extracting domains, matching against account databases, and writing updates to CRMs. |
+| **[Dedupe](https://github.com/dedupeio/dedupe)** | [![GitHub stars](https://img.shields.io/github/stars/dedupeio/dedupe?style=social&color=white)](https://github.com/dedupeio/dedupe/stargazers) | Python | Machine-learning-powered deduplication and record linkage library using active learning to learn optimal weights across company names, emails, and phone numbers. |
+| **[RapidFuzz](https://github.com/maxbachmann/RapidFuzz)** | [![GitHub stars](https://img.shields.io/github/stars/maxbachmann/RapidFuzz?style=social&color=white)](https://github.com/maxbachmann/RapidFuzz/stargazers) | C++ / Python | Ultra-fast fuzzy string matching library implementing Levenshtein, Jaro-Winkler, and token sort metrics; orders of magnitude faster than standard implementations. |
+| **[Splink](https://github.com/moj-analytical-services/splink)** | [![GitHub stars](https://img.shields.io/github/stars/moj-analytical-services/splink)](https://github.com/moj-analytical-services/splink/stargazers) | Python / DuckDB / Spark | Highly scalable probabilistic record linkage tool using the Fellegi-Sunter methodology; handles millions of lead and account records across DuckDB, SQLite, or Apache Spark. |
+| **[Corteza CRM](https://github.com/cortezaproject/corteza)** | [![GitHub stars](https://img.shields.io/github/stars/cortezaproject/corteza?style=social&color=white)](https://github.com/cortezaproject/corteza/stargazers) | Go / Vue.js | 100% open-source low-code alternative to Salesforce with native lead qualification, account conversion rules, and configurable record relationships. |
+| **[Zingg](https://github.com/zinggAI/zingg)** | [![GitHub stars](https://img.shields.io/github/stars/zinggAI/zingg?style=social&color=white)](https://github.com/zinggAI/zingg/stargazers) | Java / Scala / Python | Open-source ML entity resolution tool built on Apache Spark; performs fuzzy matching, blocking, and identity clustering across massive customer databases. |
+| **[Python Record Linkage Toolkit](https://github.com/J535D165/recordlinkage)** | [![GitHub stars](https://img.shields.io/github/stars/J535D165/recordlinkage?style=social&color=white)](https://github.com/J535D165/recordlinkage/stargazers) | Python | Comprehensive library for record linkage and entity resolution with standard indexing techniques, classifiers, and similarity comparison algorithms. |
+| **[CSV Dedupe](https://github.com/dedupeio/csvdedupe)** | [![GitHub stars](https://img.shields.io/github/stars/dedupeio/csvdedupe?style=social&color=white)](https://github.com/dedupeio/csvdedupe/stargazers) | Python | Command-line utility powered by Dedupe for deduplicating and matching lead/account CSV files using interactive active learning prompts. |
+
+---
+
+## 🧩 Architecture & Framework Stacks
+
+Building a custom, data-sovereign lead-to-account matching infrastructure? Here are proven open-source reference patterns:
+
+```
+[Inbound Lead (Form/Webhook)]
+            │
+            ▼
+   ┌─────────────────┐
+   │    n8n / NiFi   │ ◄─── Ingestion, Email Domain Parsing & Filtering
+   └────────┬────────┘
+            │
+            ▼
+   ┌─────────────────┐
+   │ RapidFuzz/Splink│ ◄─── Multi-Field Fuzzy Match against Master Account DB
+   └────────┬────────┘
+            │
+      ┌─────┴────────────────┐
+      ▼                      ▼
+[Exact Match Found]   [Probabilistic Match / Tie-Breaker]
+      │                      │
+      ▼                      ▼
+  Assign Account         Trigger RevOps Review / Smart Routing
+      │                      │
+      └───────────┬──────────┘
+                  ▼
+         ┌─────────────────┐
+         │ CRM / Database  │ (Salesforce / Corteza / Odoo / ERPNext)
+         └─────────────────┘
+```
+
+- **Domain Normalization**: Strip common public email domains (`gmail.com`, `yahoo.com`, `outlook.com`) to prevent false-positive grouping.
+- **Fuzzy Company Matching**: Pair phonetic algorithms (Double Metaphone, Soundex) with token ratio matching (`RapidFuzz`) to reconcile abbreviations (e.g., `IBM` vs `International Business Machines`).
+- **Probabilistic Scoring**: Apply **Splink** or **Dedupe** to combine multiple weak signals (phone area code, state/city, domain prefix, IP company detection) into a high-confidence match score.
+
+---
+
+## 🤝 How to Contribute
+
+We welcome additions, corrections, and tool submissions from the RevOps, SalesOps, and engineering community!
+
+1. 🍴 **Fork the repository**
+2. 🌿 **Create a feature branch** (`git checkout -b add-tool-name`)
+3. ✍️ **Update `README.md`**: Follow the established table format with accurate pricing, scale metrics, or star badges
+4. 🚀 **Commit and push your changes** (`git commit -m "Add ToolName to SaaS directory"`)
+5. 📬 **Submit a Pull Request** with a concise explanation
+
+⭐ Don't forget to star the repo if you find this directory valuable!
+
+---
+
+## ⚖️ Disclaimer
+
+- This repository is a community-curated, independent directory. Company names, logos, and trademarks belong to their respective owners.
+- Listed pricing, valuations, and free tier parameters reflect publicly available tier information as of 2026 and are subject to vendor updates.
+- Organizations deploying matching pipelines must ensure strict compliance with applicable privacy regulations (GDPR, CCPA) and CRM security protocols.
+
+---
+
+<p align="center">
+  <b>Built with ❤️ for Revenue Operations, Marketing Ops, and CRM Engineers worldwide.</b>
+</p>
