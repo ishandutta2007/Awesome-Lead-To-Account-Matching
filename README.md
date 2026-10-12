@@ -59,7 +59,7 @@ The table below lists leading SaaS products for automated Lead-to-Account matchi
 
 ## 💻 Open-Source GitHub Projects
 
-Explore top-rated open-source projects for building custom lead-to-account matching workflows, entity resolution pipelines, fuzzy string comparisons, and self-hosted CRM routing. Projects are sorted in descending order by **GitHub Stars_Count**.
+Explore top-rated open-source projects for building custom lead-to-account matching workflows, entity resolution pipelines, fuzzy string comparisons, and self-hosted CRM routing. Projects are sorted in descending order by **GitHub_Stars_Count**.
 
 | 📦 Repository & Project | ⭐ Stars_Badge | 🛠️ Technology | 📝 Description & L2A Capability |
 | :--- | :--- | :--- | :--- |
